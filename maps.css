@@ -1,0 +1,88 @@
+/* maps.css */
+
+h1 {  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #11005e;
+
+}
+
+#logo{
+  height: 50px;
+  width: 50px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* Lista de grupos */
+#lista {
+  margin-top: 20px;
+  padding: 10px;
+  max-width: 600px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#lista p {
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-left: 4px solid #11005e;
+  border-radius: 4px;
+}
+
+#lista b {
+  color: #000000;
+}
+
+#input-endereco {
+  width: 600px;   /* largura */
+  height: 20px;   /* altura */
+  font-size: 12px; /* tamanho do texto */
+  padding: 8px;   /* espaço interno */
+  margin-bottom: 15px;
+}
+
+/* Botão */
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #11005e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #11005e;
+}
+
+/* Mapa */
+#mapa {
+  height: 450px;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #lista, #mapa {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
