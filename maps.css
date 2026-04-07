@@ -1,15 +1,19 @@
 /* maps.css */
 
-h1 {  
+#titulo {  
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   color: #11005e;
+  position:absolute;
+  left: 40%;
+  transform: translateX(-88%);
 
 }
 
 #logo{
-  height: 50px;
-  width: 50px;
+  height: 4%;
+  width: 6%;
+  
 }
 
 .header {
@@ -21,12 +25,14 @@ h1 {
 #lista {
   margin-top: 20px;
   padding: 10px;
-  max-width: 600px;
+  max-width: 900px;
+  width: 56%;
   background-color: #f8f9fa;
   border-radius: 8px;
   font-family: Arial, sans-serif;
   line-height: 1.5em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  
 }
 
 #lista p {
@@ -42,9 +48,9 @@ h1 {
 }
 
 #input-endereco {
-  width: 600px;   /* largura */
+  width: 56%;   /* largura */
   height: 20px;   /* altura */
-  font-size: 12px; /* tamanho do texto */
+  font-size: 16px; /* tamanho do texto */
   padding: 8px;   /* espaço interno */
   margin-bottom: 15px;
 }
@@ -59,15 +65,17 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 19%;
+  margin-bottom: 10px;
 }
 
 button:hover {
-  background-color: #11005e;
+  background-color: #8071c2;
 }
 
 /* Mapa */
 #mapa {
-  height: 450px;
+  height: 460px;
   width: 100%;
   max-width: 900px;
   margin-top: 20px;
@@ -81,8 +89,5 @@ button:hover {
     max-width: 100%;
   }
 
-  button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+ 
 }
