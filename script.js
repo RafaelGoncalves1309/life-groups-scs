@@ -87,6 +87,55 @@ function calcularDistancia(lat1, lon1, lat2, lon2) {
 
 
 // ================= LISTA =================
+
+function mostrarGrupos(grupos, userLat, userLng) {
+  const div = document.getElementById("lista");
+  div.innerHTML = "";
+
+  grupos.sort((a, b) =>
+    calcularDistancia(userLat, userLng, a.latitude, a.longitude) -
+    calcularDistancia(userLat, userLng, b.latitude, b.longitude)
+  );
+
+  grupos.forEach((g, index) => {
+    const dist = calcularDistancia(userLat, userLng, g.latitude, g.longitude).toFixed(2);
+
+    const card = document.createElement("div");
+    card.classList.add("life-card");
+
+    // 🔥 destaque do mais próximo
+    if (index === 0) {
+      card.classList.add("proximo");
+    }
+
+    card.innerHTML = `
+      <div class="life-titulo">${g["Nome do Life"]}</div>
+
+      <div class="life-info">
+        ${g.Endereco}, ${g.Bairro}, ${g.Cidade}
+      </div>
+
+      <div class="life-info">
+        ${g.Dia} às ${g.Horario}
+      </div>
+
+      <div class="life-info">
+        Líder: ${g.Lider} | ${g.Telefone}
+      </div>
+
+      <div class="life-info">
+        Público: ${g.Publico}
+      </div>
+
+      <div class="life-distancia">
+        📍 ${dist} km de você
+      </div>
+    `;
+
+    div.appendChild(card);
+  });
+}
+/*
 function mostrarGrupos(grupos, userLat, userLng) {
   const div = document.getElementById("lista");
   div.innerHTML = "";
@@ -113,7 +162,7 @@ function mostrarGrupos(grupos, userLat, userLng) {
   });
 
   div.innerHTML = html;
-}
+}  */
 
 
 // ================= MAPA =================
